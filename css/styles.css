@@ -54,7 +54,7 @@ img {
   --hover-button-color: #1d86dd;
   --background-color: #2f303a;
   --second-bg-color: #f5f4fa;
-
+  --bg-overlay-color: #c4c4c4;
   --logo-color: #000000;
 
   --underline-color: #ececec;
@@ -95,7 +95,6 @@ body {
   overflow: hidden;
 }
 
-
 .section.team {
   margin-bottom: 0;
   padding-top: 94px;
@@ -108,8 +107,6 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-
-
 
 /* Page header */
 
@@ -164,7 +161,7 @@ body {
 }
 
 .footer > .item + .item {
-margin-top: 12px;
+  margin-top: 12px;
 }
 
 .main-nav {
@@ -238,8 +235,22 @@ margin-top: 12px;
   font-weight: 900;
   line-height: 1.36;
   text-align: center;
-letter-spacing: 0.06em;
-text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.overlay {
+  min-height: 600px;
+  max-width: 1600px;
+  background-color: var(--bg-overlay-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)),
+      url(../images/dec-pic/overlay.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* Button default */
@@ -490,7 +501,6 @@ footer {
   color: var(--footer-address-color);
 }
 
-
 .footer.contacts-link:hover {
   color: var(--accent-color);
 }
@@ -592,7 +602,6 @@ footer {
   flex-wrap: wrap;
   gap: 30px;
 }
-
 
 .portfolio-link {
   text-decoration: none;
