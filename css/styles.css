@@ -298,6 +298,36 @@ button.primary:focus {
   cursor: pointer;
 }
 
+/* .button.second {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+
+  color: white;
+  background-color: #grey;
+} */
+
+/* .button.second:hover,
+.button.second:focus {
+  background-color: var(--hover-button-color);
+  cursor: pointer;
+} */
+
+/* .button.second:active {
+  color: var(--accent-color);
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  cursor: pointer;
+} */
+
+/* .button.second::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  margin-right: 10px;
+} */
 /* Sections & titles & lists & sybtitles */
 
 /* h2 */
