@@ -390,6 +390,10 @@ button.primary:focus {
   margin-bottom: 30px;
 }
 
+.icon-settings {
+  height: 32px;
+}
+
 /* About us */
 
 .section.about {
