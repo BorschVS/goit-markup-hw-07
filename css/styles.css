@@ -391,9 +391,9 @@ button.primary:focus {
 }
 
 .icon-settings {
-  height: 32px;
+  width: 70px;
+  height: 70px;
 }
-
 /* About us */
 
 .section.about {
