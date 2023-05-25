@@ -382,14 +382,12 @@ button.primary:focus {
 }
 
 .icon-container {
+  display: flex;
+
   width: 270px;
   height: 120px;
   background-color: var(--btn-menu-color);
   margin-bottom: 30px;
-}
-
-.icon {
-
 }
 
 /* About us */
