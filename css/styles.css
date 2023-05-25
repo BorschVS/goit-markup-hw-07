@@ -228,6 +228,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 696px;
+  padding: 0;
 
   color: var(--primary-white-color);
 
@@ -247,9 +248,8 @@ body {
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)),
-      url(../images/dec-pic/overlay.jpg);
+      url(../images/dec-pic/overlay-1.jpg);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
 
@@ -379,6 +379,17 @@ button.primary:focus {
 
 .feauture-list .item:not(:nth-child(-n + 4)) {
   margin-bottom: 0;
+}
+
+.icon-container {
+  width: 270px;
+  height: 120px;
+  background-color: var(--btn-menu-color);
+  margin-bottom: 30px;
+}
+
+.icon {
+
 }
 
 /* About us */
