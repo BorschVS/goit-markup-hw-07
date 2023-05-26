@@ -66,8 +66,13 @@ img {
 
   --outline-control-color: #06b785;
 
+  
+
   font-family: "Raleway", sans-serif;
   font-family: "Roboto", sans-serif;
+
+  /* icons */
+  --icon-color: #AFB1B8;
 }
 
 body {
@@ -383,6 +388,10 @@ button.primary:focus {
 
 .icon-container {
   display: flex;
+  
+}
+
+.icon-container.feauture {
   padding-left: 100px;
   padding-right: 100px;
   padding-top: 25px;
@@ -391,11 +400,76 @@ button.primary:focus {
   margin-bottom: 30px;
 }
 
-.icon-settings {
+.icon-feauture {
   display: inline-flex;
   width: 70px;
   height: 70px;
 }
+
+.icon-link {
+  display: inline-flex;
+  text-decoration: none;
+  border-radius: 50px;
+  margin-top: 16px;
+  padding: 12px;
+  background-color: var(--primary-white-color);
+  fill: var(--icon-color);
+}
+
+.icon-link:hover {
+  fill: var(--primary-white-color);
+  background-color: var(--hover-button-color);
+}
+
+.team-icons {
+  width: 20px;
+  height: 20px;
+  gap: 30px;
+}
+
+.section {
+  margin-bottom: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.client.section-title {
+text-align: center;
+margin-bottom: 50px;
+padding: 0;
+}
+
+.icon-link.partner {
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  fill: var(--icon-color);
+  width: 170px;
+  height: 94px;
+  padding: 0;
+  margin-top: 0;
+  margin-right: 30px;
+}
+
+.icon-link.partner:nth-last-child(1) {
+margin: 0;
+}
+
+.icon-link.partner:hover {
+  background-color: transparent;
+  fill: var(--hover-button-color);
+}
+
+.partner-icon {
+display: inline-flex;
+justify-content: center;
+flex-wrap: nowrap;
+}
+
+
+
+.icon {
+}
+
 /* About us */
 
 .section.about {
