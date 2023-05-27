@@ -457,6 +457,7 @@ margin: 0;
 .icon-link.partner:hover {
   background-color: transparent;
   fill: var(--hover-button-color);
+  border: 1px solid var(--hover-button-color);
 }
 
 .partner-icon {
@@ -622,6 +623,16 @@ footer {
 
 .footer.contacts-link:hover {
   color: var(--accent-color);
+}
+
+.subscribe-container {
+  display: inline-block;
+  margin-left: 156px;
+}
+
+.list.footer-icons {
+display: inline-flex;
+gap: 10px;
 }
 
 /* 1 of flex variants */
