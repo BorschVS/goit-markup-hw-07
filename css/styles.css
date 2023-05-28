@@ -491,7 +491,7 @@ flex-wrap: nowrap;
 /* About us */
 
 .section.about {
-  padding-bottom: 94px;
+  padding-top: 0;
 }
 
 .about-list {
