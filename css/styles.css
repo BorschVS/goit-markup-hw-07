@@ -73,6 +73,8 @@ img {
 
   /* icons */
   --icon-color: #AFB1B8;
+
+  --footer-icon-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
@@ -177,6 +179,21 @@ body {
   display: flex;
 }
 
+.link {
+  display: inline;
+}
+
+.icon-post, .icon-phone {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.icon-post:hover, .icon-post:focus, .icon-phone:hover, .icon-phone:focus {
+  fill: currentColor;
+  cursor: pointer;
+}
+
 /* Один из вариантов установки корректных отступов без первого элемента */
 
 /* .site-nav .item + .item,
@@ -196,11 +213,13 @@ body {
   margin-left: auto;
 }
 
+
 .nav-link,
 .contacts-link {
-  display: block;
+  display: flex;
   padding: 32px 0;
 
+  fill: var(--primary-text-color);
   color: var(--title-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -217,6 +236,7 @@ body {
 .nav-link:focus,
 .contacts-link:focus {
   color: var(--accent-color);
+  fill: var(--hover-button-color);
 }
 
 /* Hero */
@@ -225,6 +245,8 @@ body {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: var(--background-color);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
@@ -388,7 +410,6 @@ button.primary:focus {
 
 .icon-container {
   display: flex;
-  
 }
 
 .icon-container.feauture {
@@ -416,9 +437,10 @@ button.primary:focus {
   fill: var(--icon-color);
 }
 
-.icon-link:hover {
+.icon-link:hover .icon-link:focus {
   fill: var(--primary-white-color);
   background-color: var(--hover-button-color);
+  cursor: pointer;
 }
 
 .team-icons {
@@ -464,11 +486,6 @@ margin: 0;
 display: inline-flex;
 justify-content: center;
 flex-wrap: nowrap;
-}
-
-
-
-.icon {
 }
 
 /* About us */
@@ -592,6 +609,7 @@ footer {
 }
 
 .footer.container {
+  
   width: 1200px;
   padding: 0 15px;
   margin-top: 0px;
@@ -600,7 +618,14 @@ footer {
   margin-bottom: 0;
 }
 
+.footer-flex {
+  display: flex;
+  gap: 70px;
+}
+
 .location {
+  display: flex;
+  flex-direction: column;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -625,14 +650,32 @@ footer {
   color: var(--accent-color);
 }
 
+.subscribe.subtitle {
+  display: inline-flex;
+  color: var(--primary-white-color);
+}
+
 .subscribe-container {
-  display: inline-block;
-  margin-left: 156px;
+  display: inline-flex;
+  flex-direction: column;
+}
+.footer-flex {
+  align-items: baseline;
 }
 
 .list.footer-icons {
 display: inline-flex;
 gap: 10px;
+}
+
+.social.icon-link {
+margin-top: 20px;
+background-color: var(--footer-icon-color);
+fill: var(--primary-white-color);
+}
+
+.social.icon-link:hover {
+  background-color: var(--hover-button-color);
 }
 
 /* 1 of flex variants */
