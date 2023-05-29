@@ -621,19 +621,15 @@ footer {
 }
 
 .footer.container {
-  display: inline-flex;
+  display: flex;
   align-items: baseline;
+
   width: 1200px;
   padding: 0 15px;
   margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0;
-}
-
-.footer-flex {
-  display: flex;
-  gap: 70px;
 }
 
 .location {
