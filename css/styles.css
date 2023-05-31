@@ -113,6 +113,25 @@ body {
   padding-bottom: 94px;
 }
 
+/* list */
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Container centering*/
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Page header */
 
 .page-header {
@@ -158,16 +177,6 @@ body {
 }
 
 /* Navigation */
-
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer > .item + .item {
-  margin-top: 12px;
-}
 
 .main-nav {
   margin-left: 93px;
@@ -360,7 +369,13 @@ button.primary:focus {
 } */
 /* Sections & titles & lists & sybtitles */
 
-/* h2 */
+/* Section */
+
+.section {
+  margin-bottom: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .section.team {
   margin-bottom: 0;
@@ -383,7 +398,7 @@ button.primary:focus {
   margin-bottom: 50px;
 }
 
-/* Lists */
+/* Feauture */
 
 .feauture.section {
   padding-top: 94px;
@@ -399,6 +414,15 @@ button.primary:focus {
   line-height: 1.7;
 }
 
+.feauture-text {
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.17;
+}
+
 .feauture-list .item {
   width: calc((100% - 90px) / 4);
 }
@@ -411,12 +435,14 @@ button.primary:focus {
   margin-bottom: 0;
 }
 
+/* Icon settings */
+
 .icon-container.feauture {
   display: inline-flex;
-width: 270px;
-height: 120px;
-justify-content: center;
-align-items: center;
+  width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
   background-color: var(--btn-menu-color);
   margin-bottom: 30px;
 }
@@ -435,12 +461,12 @@ align-items: center;
   text-decoration: none;
   border-radius: 50px;
 
- 
   background-color: var(--primary-white-color);
   fill: var(--icon-color);
 }
 
-.icon-link:hover, .icon-link:focus {
+.icon-link:hover,
+.icon-link:focus {
   fill: var(--primary-white-color);
   background-color: var(--accent-color);
   cursor: pointer;
@@ -450,12 +476,6 @@ align-items: center;
   width: 20px;
   height: 20px;
   gap: 30px;
-}
-
-.section {
-  margin-bottom: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .client.section-title {
@@ -470,24 +490,24 @@ align-items: center;
 }
 
 .icon-link.partner {
-display: inline-flex;
+  display: inline-flex;
 
   width: 170px;
   height: 92px;
   padding: 0;
   margin-top: 0;
-  
+
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
-  
 }
 
 .icon-link.partner:nth-last-child(1) {
   margin: 0;
 }
 
-.icon-link.partner:hover, .icon-link.partner:focus {
+.icon-link.partner:hover,
+.icon-link.partner:focus {
   background-color: transparent;
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
@@ -568,14 +588,7 @@ display: inline-flex;
   padding-bottom: 30px;
 }
 
-.feauture-text {
-  margin-top: 10px;
-  margin-bottom: 0;
 
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.17;
-}
 
 .subtitle-team {
   margin: 0;
@@ -592,17 +605,6 @@ display: inline-flex;
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.18;
-}
-
-/* Container centering*/
-
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* title centering */
@@ -632,6 +634,10 @@ footer {
   margin-bottom: 0;
 }
 
+.footer > .item + .item {
+  margin-top: 12px;
+}
+
 .location {
   display: flex;
   flex-direction: column;
@@ -655,7 +661,8 @@ footer {
   color: var(--footer-address-color);
 }
 
-.footer.contacts-link:hover, .footer.contacts-link:focus {
+.footer.contacts-link:hover,
+.footer.contacts-link:focus {
   color: var(--accent-color);
 }
 
@@ -664,10 +671,9 @@ footer {
 }
 
 .subscribe.subtitle {
-margin-bottom: 20px;
+  margin-bottom: 20px;
   color: var(--primary-white-color);
 }
-
 
 .list.social-icons {
   display: inline-flex;
@@ -679,7 +685,8 @@ margin-bottom: 20px;
   fill: var(--primary-white-color);
 }
 
-.social.icon-link:hover, .social.icon-link:focus {
+.social.icon-link:hover,
+.social.icon-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -756,9 +763,9 @@ margin-bottom: 20px;
 .btn.element:focus {
   color: var(--primary-white-color);
   background-color: var(--hover-button-color);
- 
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btn.element:active {
