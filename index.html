@@ -72,7 +72,7 @@
       <section class="hero overlay">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button primary">Замовити послугу</button>
+          <button type="button" class="button primary" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -507,5 +507,21 @@
           </div>
     </div> 
     </footer>
+
+    <script>
+    
+    const { height: pageHeaderHeight } = document
+      .querySelector(".page-header")
+      .getBoundingClientRect();
+      
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
+      </script>
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="close" data-modal-close><span class="x">×</span></button>
+        </div>
+      </div>
+      <script src="./js/modal.js"></script>
   </body>
 </html>
