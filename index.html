@@ -138,28 +138,37 @@
           <h2 class="section-title centered">Чим ми займаємося</h2>
           <ul class="about-list list">
             <li class="item">
+              <div class="about-thumb">
               <img
                 src="images/first-img.jpg"
                 alt="Процес кодування на планшеті"
                 width="370"
                 height="294"
               />
+              <p class="about-text">Десктопні додатки</p>
+            </div>
             </li>
             <li class="item">
+              <div class="about-thumb">
               <img
                 src="images/sec-img.jpg"
                 alt="Дівчина з телефоном перед ноутбуком"
                 width="370"
                 height="294"
               />
+              <p class="about-text">Мобільні додатки</p>
+            </div>
             </li>
             <li class="item">
+              <div class="about-thumb">
               <img
                 src="images/tr-img.jpg"
                 alt="Вибір кольору на планшеті"
                 width="370"
                 height="294"
               />
+              <p class="about-text">Дизайнерські рішення  </p>
+            </div>
             </li>
           </ul>
         </div>
@@ -508,18 +517,24 @@
     </div> 
     </footer>
 
-    <script>
+    <!-- Fixed-header-size-autocorrection -->
+
+    <!-- <script>
     
     const { height: pageHeaderHeight } = document
       .querySelector(".page-header")
       .getBoundingClientRect();
       
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
-      </script>
+      </script> -->
 
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="close" data-modal-close><span class="x">×</span></button>
+          <button class="close" data-modal-close>
+            <svg class="icon-close"  width="18" height="18">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+          </button>
         </div>
       </div>
       <script src="./js/modal.js"></script>

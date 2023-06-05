@@ -57,6 +57,11 @@ img {
   --bg-overlay-color: #c4c4c4;
   --logo-color: #000000;
 
+  --transparent-bgc-grey: rgba(47, 48, 58, 0.8);
+  --transparent-bgc-blue: rgba(33, 150, 243, 0.9);
+
+  --about-text-color: rgba(255, 255, 255, 1);
+
   --underline-color: #ececec;
 
   /* Portfolio */
@@ -138,13 +143,12 @@ body {
 /* Page header */
 
 .page-header {
-position: fixed;
-min-height: 80px;
-width: 100%;
-top: 0;
-left: 0;
+  min-height: 80px;
+  width: 100%;
+  top: 0;
+  left: 0;
 
-background-color: var(--primary-white-color);
+  background-color: var(--primary-white-color);
   border-bottom: 1px solid var(--underline-color);
 }
 
@@ -217,6 +221,10 @@ background-color: var(--primary-white-color);
   display: inline-flex;
   align-items: center;
   margin-right: 10px;
+
+  cursor: pointer;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-post:hover,
@@ -224,7 +232,6 @@ background-color: var(--primary-white-color);
 .icon-phone:hover,
 .icon-phone:focus {
   fill: currentColor;
-  cursor: pointer;
 }
 
 /* Один из вариантов установки корректных отступов без первого элемента */
@@ -258,6 +265,8 @@ background-color: var(--primary-white-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link {
@@ -321,6 +330,8 @@ background-color: var(--primary-white-color);
   min-width: 216px;
   height: 50px;
   padding: 10px 32px;
+  border: 2px solid transparent;
+  border-radius: 4px;
 
   font-size: 16px;
   line-height: 1.87;
@@ -329,8 +340,10 @@ background-color: var(--primary-white-color);
   color: var(--title-text-color);
   background-color: var(--background-color);
 
-  border: 2px solid transparent;
-  border-radius: 4px;
+  cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Primary btn */
@@ -349,7 +362,6 @@ background-color: var(--primary-white-color);
 button.primary:hover,
 button.primary:focus {
   background-color: var(--hover-button-color);
-  cursor: pointer;
 }
 
 .button.primary:active {
@@ -485,13 +497,17 @@ button.primary:focus {
 
   background-color: var(--primary-white-color);
   fill: var(--icon-color);
+
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-link:hover,
 .icon-link:focus {
   fill: var(--primary-white-color);
   background-color: var(--accent-color);
-  cursor: pointer;
 }
 
 .team-icons {
@@ -522,6 +538,10 @@ button.primary:focus {
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-link.partner:nth-last-child(1) {
@@ -551,6 +571,32 @@ button.primary:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.about-thumb {
+  position: relative;
+}
+
+.about-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+
+  width: 100%;
+  padding: 27px 0;
+  text-align: center;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--about-text-color);
+  background-color: var(--transparent-bgc);
 }
 
 /* .about-list {
@@ -609,8 +655,6 @@ button.primary:focus {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-
 
 .subtitle-team {
   margin: 0;
@@ -681,6 +725,8 @@ footer {
 
   font-weight: 400;
   color: var(--footer-address-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer.contacts-link:hover,
@@ -779,6 +825,10 @@ footer {
   color: var(--title-text-color);
   background-color: var(--btn-menu-color);
   border: 1px solid transparent;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn.element:hover,
@@ -797,11 +847,11 @@ footer {
   cursor: pointer;
 }
 
-/* Portfolio's main-section */
+/* Portfolio's main-section  (for auto-correction-header-js)*/
 
-.main-portfolio {
+/* .main-portfolio {
   padding-top: 80px;
-}
+} */
 
 /* Portfolio */
 
@@ -814,6 +864,13 @@ footer {
   border-bottom: 1px solid var(--underline-color);
 }
 
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -824,11 +881,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-}
-
-.portfolio-link {
-  display: block;
-  text-decoration: none;
 }
 
 .subtitle.portfolio {
@@ -850,7 +902,37 @@ footer {
   color: var(--primary-text-color);
 }
 
+.text-position {
+  position: relative;
+  overflow: hidden;
+}
 
+.description-text {
+  position: absolute;
+  top: 0%;
+  left: 0;
+
+  display: block;
+  margin: 0;
+  padding: 63px 24px;
+  height: 100%;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-white-color);
+  background-color: var(--transparent-bgc-blue);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+}
+
+.text-position:hover .description-text {
+  transform: translateY(0);
+}
 
 /* Backdrop */
 
@@ -863,6 +945,8 @@ footer {
   height: 100%;
 
   background-color: var(--backdrop-color);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
@@ -872,23 +956,50 @@ footer {
 
 .modal {
   position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   min-width: 528px;
   min-height: 581px;
 
   background-color: var(--primary-white-color);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 
+  opacity: 1;
 }
 
+/* @keyframes opening {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
+
+
 .close {
-  position: relative;
+  position: absolute;
+  top: 6px;
+  right: 7px;
+
+  padding: 0;
+  margin: 0;
+
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
+
+}
+
+.icon-close {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 }
