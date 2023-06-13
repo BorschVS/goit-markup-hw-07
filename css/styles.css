@@ -986,7 +986,7 @@ footer {
   transform: translate(-50%, -50%) scale(1);
 
   min-width: 528px;
-  min-height: 581px;
+
 
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -1008,7 +1008,9 @@ footer {
 
   width: 30px;
   height: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  
+  background-color: transparent;
+  border: 1px solid var(--backdrop-color);
   border-radius: 50px;
 }
 
@@ -1030,14 +1032,14 @@ footer {
 /* submit form */
 
 .submit-form {
-  padding: 0;
+  padding: 40px;
   margin: 0;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
 }
 
 .form-field-title {
-  margin-top: 40px;
+  margin: 0;
   margin-bottom: 12px;
   text-align: center;
   font-weight: 700;
@@ -1054,8 +1056,6 @@ footer {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
 
   font-weight: 400;
   font-size: 12px;
@@ -1136,6 +1136,7 @@ textarea::placeholder {
   justify-content: start;
   align-items: center;
   gap: 8px;
+  margin-left: 4px;
 
   margin-top: 20px;
   margin-bottom: 30px;
@@ -1158,6 +1159,7 @@ textarea::placeholder {
   height: 15px;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
+  color: transparent;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-image 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1169,6 +1171,12 @@ textarea::placeholder {
   background-size: contain;
   background-origin: border-box;
   border: 2px solid var(--accent-color);
+  
+}
+
+.checkbox-input:focus + .icon-checked {
+  border: 2px solid var(--accent-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .policy-link {
@@ -1211,7 +1219,7 @@ button.submit:focus {
 /* subscribe form */
 
 .subscribe-form {
-  margin-left: 94px;
+  margin-left: auto;
 }
 
 .submit-field-title {
