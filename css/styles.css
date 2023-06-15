@@ -165,19 +165,57 @@ body {
   margin: 0 auto;
 }
 
-.header-container.display {
+.header-container--display {
   display: flex;
   align-items: center;
 }
 
-/* LOGO */
 
-.nav-link.visit {
+
+.site-nav,
+.contacts {
+  display: flex;
+  gap: 50px;
+}
+
+.contacts.list {
+  margin-left: auto;
+}
+
+.site-nav__link,
+.contacts__link {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+
+  fill: var(--primary-text-color);
+  color: var(--title-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts__link {
+  color: var(--primary-text-color);
+}
+
+.site-nav__link:hover,
+.contacts__link:hover,
+.site-nav__link:focus,
+.contacts__link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.site-nav__link--visit {
   position: relative;
   color: var(--accent-color);
 }
 
-.nav-link.visit::after {
+.site-nav__link--visit::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -188,6 +226,8 @@ body {
   border-radius: 2px;
 }
 
+/* LOGO */
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
@@ -196,7 +236,7 @@ body {
   line-height: 1.4;
 }
 
-.logo > .logo-type {
+.logo > .page-header__logo--color {
   color: var(--logo-color);
 }
 
@@ -215,7 +255,7 @@ body {
   margin-left: 93px;
 }
 
-.site-nav {
+.site__nav {
   display: flex;
 }
 
@@ -249,44 +289,6 @@ body {
 } */
 
 /* Современный вариант */
-
-.site-nav,
-.contacts {
-  display: flex;
-  gap: 50px;
-}
-
-.contacts.list {
-  margin-left: auto;
-}
-
-.nav-link,
-.contacts-link {
-  display: flex;
-  align-items: center;
-  padding: 32px 0;
-
-  fill: var(--primary-text-color);
-  color: var(--title-text-color);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.17;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts-link {
-  color: var(--primary-text-color);
-}
-
-.nav-link:hover,
-.contacts-link:hover,
-.nav-link:focus,
-.contacts-link:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
-}
 
 /* Hero */
 .hero {
