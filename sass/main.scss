@@ -1,0 +1,23 @@
+@import './utils/variables';
+
+@import './base/body';
+
+@import './utils/visually-hidden';
+@import './utils/placeholders';
+@import './utils/each';
+@import './utils/mixins';
+
+@import './components/page-header/page-header';
+@import './components/page-header/logo';
+@import './components/page-header/site-nav';
+@import './components/page-header/contcts-icons';
+
+@import './components/main/hero/hero';
+
+@import './components/main/feautures/feautures';
+@import './components/main/feautures/feautures-icon-settings';
+
+@import './components/main/about/about-us';
+
+@import './components/main/team/team';
+@import './components/main/team/social-icons';

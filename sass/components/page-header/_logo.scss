@@ -1,0 +1,19 @@
+.logo {
+    @extend %logo;
+
+    &>.page-header__logo--color {
+            color: $logo-color;
+    }
+}
+
+.logo.footer {
+    display: inline-block;
+    margin-bottom: 28px;
+
+    &>.footer__logo--color {
+            color: $primary-white-color;
+        }
+}
+
+
+
