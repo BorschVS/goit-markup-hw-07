@@ -1,10 +1,10 @@
-.social-icons {
+.social-list {
     @extend %list;
     display: inline-flex;
     gap: 10px;
 }
 
-.social-icons__link {
+.social-list__link {
 display: inline-flex;
 width: 44px;
 height: 44px;
@@ -29,7 +29,7 @@ fill $transition-derault;
   }
 }
 
-.social-icons__icon {
+.social-list__icon {
     width: 20px;
     height: 20px;
     gap: 30px;

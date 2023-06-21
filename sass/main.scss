@@ -7,6 +7,10 @@
 @import './utils/each';
 @import './utils/mixins';
 
+// main
+
+@import './components/sections/sections';
+
 @import './components/page-header/page-header';
 @import './components/page-header/logo';
 @import './components/page-header/site-nav';
@@ -21,3 +25,21 @@
 
 @import './components/main/team/team';
 @import './components/main/team/social-icons';
+
+@import './components/main/partners/partners-icons';
+
+@import './components/footer/footer';
+@import './components/footer/footer-logo/footer-logo';
+@import './components/footer/address/address';
+@import './components/footer/social/social';
+@import './components/footer/subscribe-form/subscribe-form';
+
+// portfolio
+
+@import './components/portfolio/btn-filter/buttons';
+@import './components/portfolio/card-set/cards';
+
+
+// submit form 
+
+@import './components/modal/submit-form';
